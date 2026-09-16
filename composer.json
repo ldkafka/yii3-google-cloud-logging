@@ -1,0 +1,75 @@
+{
+    "name": "ldkafka/yii3-google-cloud-logging",
+    "type": "library",
+    "description": "Google Cloud Logging for PHP 8 / Yii3 without the Google SDK: service-account auth, read and search entries, write entries, a PSR-3 logger, a query filter builder and an optional MCP tool",
+    "keywords": [
+        "google-cloud",
+        "cloud-logging",
+        "stackdriver",
+        "logging",
+        "yii3",
+        "psr-3",
+        "mcp",
+        "docker",
+        "gcplogs"
+    ],
+    "homepage": "https://github.com/ldkafka/yii3-google-cloud-logging",
+    "license": "BSD-3-Clause",
+    "support": {
+        "issues": "https://github.com/ldkafka/yii3-google-cloud-logging/issues",
+        "source": "https://github.com/ldkafka/yii3-google-cloud-logging"
+    },
+    "authors": [
+        {
+            "name": "ldkafka",
+            "homepage": "https://github.com/ldkafka"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-openssl": "*",
+        "psr/log": "^1.1 || ^2.0 || ^3.0",
+        "psr/simple-cache": "^1.0 || ^2.0 || ^3.0"
+    },
+    "require-dev": {
+        "ldkafka/yii3-mcp-server": "^1.1",
+        "phpunit/phpunit": "^10.5 || ^11.0 || ^12.0"
+    },
+    "suggest": {
+        "ldkafka/yii3-mcp-server": "Exposes the CloudLoggingTool to AI assistants over MCP",
+        "yiisoft/config": "Auto-wires the client from params in Yii3 applications",
+        "yiisoft/cache-file": "PSR-16 cache to share access tokens between requests"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ldkafka\\GoogleCloudLogging\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ldkafka\\GoogleCloudLogging\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "1.0.x-dev"
+        },
+        "config-plugin-options": {
+            "source-directory": "config"
+        },
+        "config-plugin": {
+            "params": "params.php",
+            "di": "di.php"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
